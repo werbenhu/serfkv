@@ -86,7 +86,6 @@ func New(opts *Options) (*Server, error) {
 }
 
 func (s *Server) Delete(key string, local bool) error {
-	fmt.Printf("delete key:%s\n", key)
 	s.storage.Delete(key)
 	if local {
 		payload, err := (&Message{

@@ -32,9 +32,7 @@ func (s *Handler) HandleLeave(member serf.Member) error {
 }
 
 func (s *Handler) HandleMessage(payload []byte) error {
-
 	fmt.Printf("HandleMessage payload:%s\n", string(payload))
-
 	m := &Message{}
 	if err := m.Decode(payload); err != nil {
 		return err
