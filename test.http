@@ -1,0 +1,11 @@
+GET http://localhost:4001/set?key=name&val=hoo1
+### 
+GET http://localhost:4002/set?key=name&val=hoo2
+###
+GET http://localhost:4003/set?key=name&val=hoo3
+###
+GET http://localhost:4001/gel?key=name
+###
+GET http://localhost:4003/del?key=name
+###
+GET http://localhost:4002/get?key=name

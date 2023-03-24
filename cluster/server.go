@@ -155,7 +155,7 @@ func (s *Server) eventLoop() {
 		case serf.EventMemberLeave, serf.EventMemberFailed:
 			for _, member := range e.(serf.MemberEvent).Members {
 				if s.serf.LocalMember().Name == member.Name {
-					return
+					continue
 				}
 				s.handler.HandleLeave(member)
 			}
