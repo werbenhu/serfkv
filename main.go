@@ -25,7 +25,7 @@ func del(c *gin.Context) {
 	key := c.Query("key")
 
 	if err := srv.Delete(key, true); err != nil {
-		c.String(500, "failed")
+		c.String(http.StatusInternalServerError, "failed")
 		return
 	}
 
@@ -37,7 +37,7 @@ func get(c *gin.Context) {
 
 	val, err := srv.Get(key)
 	if err != nil {
-		c.String(500, err.Error())
+		c.String(http.StatusInternalServerError, err.Error())
 		return
 	}
 	c.String(http.StatusOK, "success, val:%s", val.(string))
@@ -48,7 +48,7 @@ func set(c *gin.Context) {
 	val := c.Query("val")
 
 	if err := srv.Set(key, val, true); err != nil {
-		c.String(500, "failed")
+		c.String(http.StatusInternalServerError, "failed")
 		return
 	}
 	c.String(http.StatusOK, "success")
