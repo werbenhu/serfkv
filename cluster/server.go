@@ -2,7 +2,6 @@ package cluster
 
 import (
 	"errors"
-	"fmt"
 	"log"
 	"net"
 	"os"
@@ -171,7 +170,6 @@ func (s *Server) eventLoop() {
 
 		case serf.EventUser:
 			msg := e.(serf.UserEvent)
-			fmt.Printf("msg name:%s, self name:%s\n", msg.Name, s.serf.LocalMember().Name)
 			if msg.Name == s.serf.LocalMember().Name {
 				continue
 			}
