@@ -1,4 +1,4 @@
-# KV
+# SerfKV
 
 A distributed in-memory key-value store built using [hashicorp/serf](https://github.com/hashicorp/serf) with HTTP API
 
