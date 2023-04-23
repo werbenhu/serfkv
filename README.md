@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README-CN.md)
+
 # SerfKV
 
 A distributed in-memory key-value store built using [hashicorp/serf](https://github.com/hashicorp/serf) with HTTP API
