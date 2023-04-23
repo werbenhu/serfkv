@@ -1,3 +1,5 @@
+[English](README.md) | [简体中文](README-CN.md)
+
 # SerfKV
 
 使用Go写的分布式内存键值存储服务，使用[hashicorp/serf](https://github.com/hashicorp/serf) 做服务发现，提供HTTP接口设置和获取键值对。
